@@ -75,11 +75,11 @@ function handleCollisions(){
 			(bird.y > canvas.height - obstaclesArray[i].bottom &&
 			bird.y + bird.height < canvas.height))){
 		
-		ctx.drawImage(bang, bird.originalWidth, 0, bird.originalWidth, bird.originalHeight, bird.x - 20, bird.y - 12, bird.width * 1.7,bird.height * 1.7);
+		ctx.drawImage(bang, bird.frameX * 1168, 0, 1168, 980, bird.x - 20, bird.y - 17, bird.width * 1.9,bird.height * 1.9);
 		ctx.font = "25px Georgia";
 		ctx.fillStyle = 'white';
 		ctx.fillText('Game Over, your score is ' + score, 160, canvas.height/2 - 10);
-
+		
 		return true;
 		}
 	}
